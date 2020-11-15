@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Выводим заголовок -->
+  <title>Pikadu — главная</title>
+  <!-- Подключаем normalize -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <!-- Подключаем стили -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Создаем шапку сайта -->
+  <header class="header">
+    <div class="header-wrapper">
+      <a href="/" class="header-logo">
+        <img class="header-logo-image" src="img/logo.svg" alt="logo: Pikadu">
+      </a>
+      <nav class="header-nav">
+        <ul class="header-menu">
+          <li class="header-menu-item"><a href="#" class="header-menu-link">Свежее</a></li>
+          <li class="header-menu-item"><a href="#" class="header-menu-link">Лучшее</a></li>
+          <li class="header-menu-item"><a href="#" class="header-menu-link">Горячее</a></li>
+          <li class="header-menu-item"><a href="#" class="header-menu-link">Подписки</a></li>
+        </ul>
+
+      </nav>
+      <!-- /.header-nav -->
+      <div class="input-group search">
+        <input type="search" class="search-input" placeholder="Поиск по сайту">
+        <button class="search-button">
+          <img src="img/search.svg" alt="icon: search" class="search-icon">
+        </button>
+      </div>
+      <!-- /.input-group -->
+      <a href="#" class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+    </div>
+    <!-- /.header-wrapper -->
+  </header>
+
+  <div class="content">
+    <main class="posts">
+    </main>
+    <form action="#" class="add-post">
+      <input type="text" name="title" class="add-title" placeholder="Заголовок поста">
+      <input type="text" name="tags" class="add-tags" placeholder="add tags comma">
+      <textarea name="text" id="text" class="add-text" placeholder="Текст вашего поста"></textarea>
+      <div class="add-buttons">
+        <button type="submit" class="button add-button">
+          Опубликовать пост
+        </button>
+      </div>
+    </form>
+    <!-- /.posts -->
+    <aside class="sidebar">
+
+      <div class="login">
+        <form class="login-form">
+          <h2 class="login-title">auth</h2>
+          <input type="text" class="login-input login-email">
+          <input type="text" class="login-input login-password">
+          <button class="login-signin">вход</button>
+        </form>
+        <button class="login-forget">login forget</button>
+        <button class="login-signup">регистрация</button>
+      </div>
+      <div class="user">
+        <div style="display: flex">
+          <a href="#" class="user-info">
+          <img width="40" height="40" src="img/avatar.jpeg" alt="photo: user" class="user-avatar">
+          <span class="user-name">islamovartem</span>
+          </a>
+          <!-- /.user-info -->
+          <button class="edit">edit</button>
+          <a href="#" class="exit">
+            <svg class="icon icon-exit">
+              <use xlink:href="img/icons.svg#exit"></use>
+            </svg>
+          </a>
+          <!-- /.exit -->
+        </div>
+        <form class="edit-box">
+          <label class="edit-label">login <input type="text" class="edit-username" name="username"></label>
+          <label class="edit-label">login <input type="text" class="edit-photo" name="photo"></label>
+          <button class="edit-btn">save</button>
+        </form>
+      </div>
+      <!-- /.user -->
+      <nav class="sidebar-nav">
+        <ul class="sidebar-menu">
+          <li class="sidebar-menu-item">
+            <a href="#" class="sidebar-menu-link">Ответы</a>
+          </li>
+          <li class="sidebar-menu-item">
+            <a href="#" class="sidebar-menu-link active">Комментарии</a>
+          </li>
+          <li class="sidebar-menu-item">
+            <a href="#" class="sidebar-menu-link">Оценки</a>
+          </li>
+          <li class="sidebar-menu-item">
+            <a href="#" class="sidebar-menu-link">Сохраненное </a>
+          </li>
+          <li class="sidebar-menu-item">
+            <a href="#" class="sidebar-menu-link">Подписки</a>
+          </li>
+          <li class="sidebar-menu-item">
+            <a href="#" class="sidebar-menu-link">Заметки</a>
+          </li>
+          <li class="sidebar-menu-item">
+            <a href="#" class="sidebar-menu-link">Игнор-лист</a>
+          </li>
+        </ul>
+      </nav>
+      <a href="new-post.html" class="button button-new-post">
+        <svg class="icon icon-fire">
+          <use xlink:href="img/icons.svg#fire"></use>
+        </svg>
+        Опубликовать пост
+      </a>
+      <div class="card">
+        <div class="card-header">
+          <h2 class="card-title">Комментарий дня</h2>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+          <a href="#" class="card-body-title">Как обмануть банкомат, если вы хотите снять больше наличных</a>
+          <p class="card-text">Таким образом укрепление и развитие структуры требуют от нас анализа форм развития. Не следует, однако забывать, что реализация намеченных плановых заданий требуют от нас анализа позиций, занимаемых участниками в отношении поставленных
+          задач. Задача организации, в особенности же консультация...</p>
+        </div>
+        <!-- /.card-body -->
+      </div>
+      <!-- /.card -->
+      <a href="#" class="ad"></a>
+    </aside>
+    <!-- /.sidebar -->
+  </div>
+  <!-- /.content -->
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+
+  <script>
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyBEjZCNOX-X2LXZrCJomzN6T8HpGLfXg_w",
+      authDomain: "pikadu-fd122.firebaseapp.com",
+      databaseURL: "https://pikadu-fd122.firebaseio.com",
+      projectId: "pikadu-fd122",
+      storageBucket: "pikadu-fd122.appspot.com",
+      messagingSenderId: "613811056764",
+      appId: "1:613811056764:web:c06b77df84b57ec8cf19f9"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-database.js"></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
